@@ -2,11 +2,7 @@
 FireBot je autić-robot dizajniran od strane učenika Srednje tehničke škole Bugojno u svrhu rješavanja problema gašenja požara na miniranim i nepristupačnim prostorima. FireBot opremljen je sa PP aparatom, prskalicom za vodu, dvije kamere, ultrazvučnim senzorima za daljinu, a upravljanje se vrši pomoću Raspberry-a povezanog sa Arduinom.
 
 ## Članovi tima
-Članovi tima su učenici 4. razreda Srednje tehničke škole Bugojno, a to su:
--Ajdin Letica
--Hamza Petrović
--Merjem Mešan
--Sajra Ajkunić
+Članovi tima su učenici 4. razreda Srednje tehničke škole Bugojno, a to su: Ajdin Letica, Hamza Petrović, Merjem Mešan, Sajra Ajkunić.
 
 ## Problem koji rješavamo
 
