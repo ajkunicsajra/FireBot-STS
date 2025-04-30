@@ -1,22 +1,16 @@
-# FireBot-STS
+## FireBot-STS
 FireBot je autić-robot dizajniran od strane učenika Srednje tehničke škole Bugojno u svrhu rješavanja problema gašenja požara na miniranim i nepristupačnim prostorima. FireBot opremljen je sa PP aparatom, prskalicom za vodu, dvije kamere, ultrazvučnim senzorima za daljinu, a upravljanje se vrši pomoću Raspberry-a povezanog sa Arduinom.
-# Članovi tima
+
+## Članovi tima
 Članovi tima su učenici 4. razreda Srednje tehničke škole Bugojno, a to su:
 -Ajdin Letica
 -Hamza Petrović
 -Merjem Mešan
 -Sajra Ajkunić
-# FireBot – Autonomni protivpožarni robot
-
-FireBot je inovativni robot razvijen s ciljem efikasnog gašenja požara na nepristupačnim i minsko-sumnjivim terenima. Ideja je nastala kao odgovor na učestale ljetne požare u Općini Bugojno i Gornjovrbaškoj regiji, koji često zahvataju minska polja i predstavljaju ozbiljnu prijetnju ljudskim životima, šumskom bogatstvu i kulturno-historijskim nalazištima.
-
----
 
 ## Problem koji rješavamo
 
 U julu 2024. godine, veliki požar zahvatio je 50 ha šume na nepristupačnom terenu kod Bugojna, ugrozivši arheološko nalazište i tražeći intervenciju helikoptera Oružanih snaga BiH. Ljudi ne mogu pristupiti takvim lokacijama bez velikog rizika, a tradicionalne metode gašenja su spore i ograničene. Više informacija: [RTV Slon – Požar kod Bugojna](https://www.rtvslon.ba/pozar-u-blizini-bugojna-jos-aktivan-jutros-stigao-helikopter-oruzanih-snaga-bih/)
-
----
 
 ## Naš pristup: FireBot
 
@@ -32,13 +26,11 @@ FireBot omogućava daljinsko upravljanje gašenjem požara bez potrebe da ljudi 
   - **Prskalica za vodu** (povezana relejem na Arduino, snabdijeva se iz kanistera)
   - **Protivpožarni aparat** (pokreće ga aktuator preko Arduina)
 
----
-
 ## Tehnologije koje koristimo
 
 - **Raspberry Pi** – prima komande sa laptopa i komunicira sa Arduinom
 - **Arduino Uno** – izvršava komande, upravlja motorima, senzorima, prskalicom i PP aparatom
-- **Ultrazvučni senzori (HC-SR04)** – za detekciju prepreka i sigurnost u kretanju
+- **Ultrazvučni senzori** – za detekciju prepreka i sigurnost u kretanju
 - **DC motori + H-most** – omogućuju kretanje vozila
 - **Relej modul** – za aktivaciju pumpe prskalice
 - **Aktuator** – za aktivaciju PP aparata
@@ -46,9 +38,7 @@ FireBot omogućava daljinsko upravljanje gašenjem požara bez potrebe da ljudi 
 - **C/C++ (Arduino IDE)** – za kontrolu hardvera
 - **Python** – za softversku logiku na Raspberry Pi-ju
 - **Baterijsko napajanje** – omogućava autonomno kretanje
-
----
-
+- 
 ## Funkcionalnosti
 
 - Daljinsko upravljanje iz sigurne zone
@@ -58,24 +48,4 @@ FireBot omogućava daljinsko upravljanje gašenjem požara bez potrebe da ljudi 
 - Rotacija prskalice u 4 smjera (gore, dolje, lijevo, desno)
 - Stabilno kretanje na neravnom terenu
 
----
 
-## Struktura repozitorija
-
----
-
-## Status projekta
-
-Trenutno u fazi testiranja i optimizacije. Glavne funkcionalnosti su implementirane, a u toku je finalno podešavanje softverske kontrole i testiranja na terenu.
-
----
-
-## Napomena
-
-FireBot je razvijen za potrebe takmičenja **Inovacijski izazov 2025** i ima za cilj pokazati kako tehnologija može pomoći u zaštiti života i kulturno-historijskog naslijeđa, uz očuvanje prirode.
-
----
-
-## Licenca
-
-Ovaj projekat je otvorenog tipa i može se koristiti u edukativne i istraživačke svrhe.
