@@ -38,7 +38,7 @@ FireBot omogućava daljinsko upravljanje gašenjem požara bez potrebe da ljudi 
 - **C/C++ (Arduino IDE)** – za kontrolu hardvera
 - **Python** – za softversku logiku na Raspberry Pi-ju
 - **Baterijsko napajanje** – omogućava autonomno kretanje
-- 
+ 
 ## Funkcionalnosti
 
 - Daljinsko upravljanje iz sigurne zone
