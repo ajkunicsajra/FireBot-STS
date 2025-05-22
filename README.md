@@ -13,9 +13,9 @@ U julu 2024. godine, veliki požar zahvatio je 50 ha šume na nepristupačnom te
 FireBot omogućava daljinsko upravljanje gašenjem požara bez potrebe da ljudi ulaze u opasne zone.
 
 ### Ključne karakteristike:
-- **Domet upravljanja:** 100 metara
+- **Domet upravljanja:** 15 metara
 - **Kretanje:** Dva glavna motora (naprijed) + pomoćni točkići (nazad) za stabilnost na neravnom terenu
-- **Upravljanje:** Laptop → Raspberry Pi → Arduino (serijska komunikacija)
+- **Upravljanje:** Laptop → Remote XY aplikacija → Bluetooth modul → Arduino (serijska komunikacija)
 - **Senzori:** Ultrazvučni senzori za detekciju prepreka (automatsko zaustavljanje na 20 cm)
 - **Vizuelna kontrola:** Prednja kamera (pokretna u 4 smjera) + zadnja kamera
 - **Gašenje požara:**
@@ -24,15 +24,16 @@ FireBot omogućava daljinsko upravljanje gašenjem požara bez potrebe da ljudi 
 
 ## Tehnologije koje koristimo
 
-- **Raspberry Pi** – prima komande sa laptopa i komunicira sa Arduinom
-- **Arduino Uno** – izvršava komande, upravlja motorima, senzorima, prskalicom i PP aparatom
+- **Raspberry Pi** – omogućava pregled vizuelnog sistema
+- **Remote XY** - aplikacija koja šalje komande na arduino preko bluetooth modula
+- **Bluetooth modul** - povezuje aplikaciju i arduino 
+- **Arduino Mega** – izvršava komande, upravlja motorima, senzorima, prskalicom i PP aparatom
 - **Ultrazvučni senzori** – za detekciju prepreka i sigurnost u kretanju
 - **DC motori + H-most** – omogućuju kretanje vozila
-- **Relej modul** – za aktivaciju pumpe prskalice
+- **Relej modul** – za aktivaciju pumpe prskalice, reflektora i aktuatora
 - **Aktuator** – za aktivaciju PP aparata
 - **2 kamere** – prednja pokretna i zadnja statična
 - **C/C++ (Arduino IDE)** – za kontrolu hardvera
-- **Python** – za softversku logiku na Raspberry Pi-ju
 - **Baterijsko napajanje** – omogućava autonomno kretanje
  
 ## Funkcionalnosti
