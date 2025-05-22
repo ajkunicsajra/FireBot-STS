@@ -5,7 +5,7 @@
 
 - **Oktobar 2024.** – Formirali tim i počeli razrađivati ideju o daljinski upravljanom protivpožarnom robotu.
  
-- **Novembar 2024.** – Razrađen osnovni koncept robota – kretanje, gašenje, upravljanje, komunikacija. Odlučeno da koristimo Arduino i Raspberry Pi.
+- **Novembar 2024.** – Razrađen osnovni koncept robota – kretanje, gašenje, upravljanje, komunikacija. Odlučeno da koristimo Arduino, Raspberry Pi i bluetooth komuniikacija.
 
 - **Decembar 2024.** – Napravljena lista potrebnih komponenti.
 
@@ -21,8 +21,8 @@
 
 
 ## Mart 2025.
-- Povezan Raspberry Pi sa Arduinom putem serijske komunikacije.
-- Napravljen osnovni Python kod za slanje komandi sa laptopa.
+- Povezana Remote XY aplikacija sa Arduinom putem bluetooth komunikacije.
+- Uspostavljeno praćenje vizuelnog sistema preko Raspberry Pi-a.
 - Uspješno testirano daljinsko upravljanje vozilom.
 
 
