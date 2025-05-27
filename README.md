@@ -13,10 +13,10 @@ U julu 2024. godine, veliki požar zahvatio je 50 ha šume na nepristupačnom te
 FireBot omogućava daljinsko upravljanje gašenjem požara bez potrebe da ljudi ulaze u opasne zone.
 
 ### Ključne karakteristike:
-- **Domet upravljanja:** 15 metara
+- **Domet upravljanja:** 30 metara
 - **Kretanje:** Dva glavna motora (naprijed) + pomoćni točkići (nazad) za stabilnost na neravnom terenu
 - **Upravljanje:** Laptop → Remote XY aplikacija → Bluetooth modul → Arduino 
-- **Vizuelna kontrola:** Prednja kamera (pokretna u 4 smjera) + zadnja kamera
+- **Vizuelna kontrola:** Prednja kamera (pokretna u 2 smjera) + zadnja kamera
 - **Gašenje požara:**
   - **Prskalica za vodu** (povezana relejem na Arduino, snabdijeva se iz kanistera)
   - **Protivpožarni aparat** (pokreće ga aktuator preko Arduina)
@@ -39,7 +39,7 @@ FireBot omogućava daljinsko upravljanje gašenjem požara bez potrebe da ljudi 
 - Daljinsko upravljanje iz sigurne zone
 - Gašenje požara vodom ili PP aparatom
 - Vizuelna povratna informacija putem kamera
-- Rotacija prskalice u 4 smjera (gore, dolje, lijevo, desno)
+- Rotacija prskalice u 2 smjera (lijevo i desno)
 - Stabilno kretanje na neravnom terenu
 
 
