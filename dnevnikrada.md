@@ -11,13 +11,12 @@
 
 ## Januar 2025.
 - Početak praktične realizacije projekta tokom raspusta.
-- Prikupljeni svi potrebni dijelovi (motori, senzori, kamere, prskalica, PP aparat).
+- Prikupljeni svi potrebni dijelovi (motori, kamere, prskalica, PP aparat).
 - Prvo sklapanje mehaničkog dijela robota i osnovna ispitivanja točkova i motora.
 
 ## Februar 2025.
 - Spojeni motori sa H-mostom i Arduinom.
-- Postavljen ultrazvučni senzor i testirana detekcija prepreka.
-- Uspješno testirano osnovno kretanje naprijed/nazad i zaustavljanje pri prepreci.
+- Uspješno testirano osnovno kretanje naprijed/nazad.
 
 
 ## Mart 2025.
