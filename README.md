@@ -1,5 +1,5 @@
 ## FireBot-STS
-FireBot je autić-robot dizajniran od strane učenika Srednje tehničke škole Bugojno u svrhu rješavanja problema gašenja požara na miniranim i nepristupačnim prostorima. FireBot opremljen je sa PP aparatom, prskalicom za vodu, dvije kamere, ultrazvučnim senzorima za daljinu, a upravljanje se vrši pomoću Raspberry-a povezanog sa Arduinom.
+FireBot je autić-robot dizajniran od strane učenika Srednje tehničke škole Bugojno u svrhu rješavanja problema gašenja požara na miniranim i nepristupačnim prostorima. FireBot opremljen je sa PP aparatom, prskalicom za vodu, dvije kamere, a upravljanje se vrši pomoću Remotexy aplikacije povezane sa Arduinom putem bluetooth modula.
 
 ## Članovi tima
 Članovi tima su učenici 4. razreda Srednje tehničke škole Bugojno, a to su: Ajdin Letica, Hamza Petrović, Merjem Mešan, Sajra Ajkunić.
@@ -15,8 +15,7 @@ FireBot omogućava daljinsko upravljanje gašenjem požara bez potrebe da ljudi 
 ### Ključne karakteristike:
 - **Domet upravljanja:** 15 metara
 - **Kretanje:** Dva glavna motora (naprijed) + pomoćni točkići (nazad) za stabilnost na neravnom terenu
-- **Upravljanje:** Laptop → Remote XY aplikacija → Bluetooth modul → Arduino (serijska komunikacija)
-- **Senzori:** Ultrazvučni senzori za detekciju prepreka (automatsko zaustavljanje na 20 cm)
+- **Upravljanje:** Laptop → Remote XY aplikacija → Bluetooth modul → Arduino 
 - **Vizuelna kontrola:** Prednja kamera (pokretna u 4 smjera) + zadnja kamera
 - **Gašenje požara:**
   - **Prskalica za vodu** (povezana relejem na Arduino, snabdijeva se iz kanistera)
@@ -27,9 +26,8 @@ FireBot omogućava daljinsko upravljanje gašenjem požara bez potrebe da ljudi 
 - **Raspberry Pi** – omogućava pregled vizuelnog sistema
 - **Remote XY** - aplikacija koja šalje komande na arduino preko bluetooth modula
 - **Bluetooth modul** - povezuje aplikaciju i arduino 
-- **Arduino Mega** – izvršava komande, upravlja motorima, senzorima, prskalicom i PP aparatom
-- **Ultrazvučni senzori** – za detekciju prepreka i sigurnost u kretanju
-- **DC motori + H-most** – omogućuju kretanje vozila
+- **Arduino Mega** – izvršava komande, upravlja motorima, prskalicom i PP aparatom
+- **Motori + H-most** – omogućuju kretanje vozila
 - **Relej modul** – za aktivaciju pumpe prskalice, reflektora i aktuatora
 - **Aktuator** – za aktivaciju PP aparata
 - **2 kamere** – prednja pokretna i zadnja statična
@@ -41,7 +39,6 @@ FireBot omogućava daljinsko upravljanje gašenjem požara bez potrebe da ljudi 
 - Daljinsko upravljanje iz sigurne zone
 - Gašenje požara vodom ili PP aparatom
 - Vizuelna povratna informacija putem kamera
-- Autonomno zaustavljanje prilikom približavanja objektima
 - Rotacija prskalice u 4 smjera (gore, dolje, lijevo, desno)
 - Stabilno kretanje na neravnom terenu
 
