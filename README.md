@@ -18,15 +18,15 @@ FireBot omogućava daljinsko upravljanje gašenjem požara bez potrebe da ljudi 
 - **Upravljanje:** Laptop → Remote XY aplikacija → Bluetooth modul → Arduino 
 - **Vizuelna kontrola:** Prednja kamera (pokretna u 2 smjera) + zadnja kamera
 - **Gašenje požara:**
-  - **Prskalica za vodu** (povezana relejem na Arduino, snabdijeva se iz kanistera)
+  - **Prskalice za vodu** (povezane relejem na Arduino, snabdijevaju se iz kanistera)
   - **Protivpožarni aparat** (pokreće ga aktuator preko Arduina)
 
 ## Tehnologije koje koristimo
 
 - **Raspberry Pi** – omogućava pregled vizuelnog sistema
-- **Remote XY** - aplikacija koja šalje komande na arduino preko bluetooth modula
+- **Remote XY** - aplikacija koja šalje komande na Arduino preko bluetooth modula
 - **Bluetooth modul** - povezuje aplikaciju i arduino 
-- **Arduino Mega** – izvršava komande, upravlja motorima, prskalicom i PP aparatom
+- **Arduino Mega** – izvršava komande, upravlja motorima, prskalica i PP aparatom
 - **Motori + H-most** – omogućuju kretanje vozila
 - **Relej modul** – za aktivaciju pumpe prskalice, reflektora i aktuatora
 - **Aktuator** – za aktivaciju PP aparata
