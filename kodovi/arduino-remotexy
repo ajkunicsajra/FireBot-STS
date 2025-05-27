@@ -1,14 +1,14 @@
 /*
-   -- FireBot_02 --
+-- FirBot004 --
    
-   This source code of graphical user interface
+   This source code of graphical user interface 
    has been generated automatically by RemoteXY editor.
-   To compile this code using RemoteXY library 3.1.13 or later version
+   To compile this code using RemoteXY library 3.1.13 or later version 
    download by link http://remotexy.com/en/library/
-   To connect using RemoteXY mobile app by link http://remotexy.com/en/download/                  
+   To connect using RemoteXY mobile app by link http://remotexy.com/en/download/                   
      - for ANDROID 4.15.01 or later version;
      - for iOS 1.12.1 or later version;
-   
+    
    This source code is free software; you can redistribute it and/or
    modify it under the terms of the GNU Lesser General Public
    License as published by the Free Software Foundation; either
@@ -22,12 +22,12 @@
 // you can enable debug logging to Serial at 115200
 //#define REMOTEXY__DEBUGLOG    
 
-// RemoteXY select connection mode and include library
+// RemoteXY select connection mode and include library 
 #define REMOTEXY_MODE__SOFTSERIAL
 
 #include <SoftwareSerial.h>
 
-// RemoteXY connection settings
+// RemoteXY connection settings 
 #define REMOTEXY_SERIAL_RX 13
 #define REMOTEXY_SERIAL_TX 12
 #define REMOTEXY_SERIAL_SPEED 9600
@@ -37,150 +37,169 @@
 
 // RemoteXY GUI configuration  
 #pragma pack(push, 1)  
-uint8_t RemoteXY_CONF[] =   // 194 bytes
-  { 255,12,0,0,0,187,0,19,0,0,0,0,31,2,106,200,200,84,1,1,
-  12,0,1,250,10,57,57,31,13,14,14,0,2,31,0,1,5,36,33,33,
-  31,44,14,14,0,2,31,0,1,5,110,33,33,44,29,14,14,0,2,31,
-  0,1,13,74,33,33,17,29,14,14,0,2,31,0,1,5,36,33,33,151,
-  13,14,14,0,2,31,0,1,5,110,33,33,151,44,14,14,0,2,31,0,
-  1,12,74,33,33,164,29,14,14,0,2,31,0,1,253,74,33,33,137,29,
-  14,14,0,2,31,0,1,44,36,33,33,106,44,14,14,0,2,31,0,1,
-  46,41,33,33,79,44,14,14,0,2,31,0,2,34,26,23,52,72,17,25,
-  13,0,2,26,31,31,79,78,0,79,70,70,0,2,39,45,13,31,102,17,
-  25,13,0,2,26,31,31,79,78,0,79,70,70,0 };
- 
-// this structure defines all the variables and events of your control interface
+uint8_t RemoteXY_CONF[] =   // 293 bytes
+  { 255,11,0,0,0,30,1,19,0,0,0,0,31,2,106,200,200,84,1,1,
+  16,0,1,249,7,57,57,29,10,17,17,0,2,31,0,1,1,29,40,40,
+  29,44,17,17,0,2,31,0,1,2,34,40,40,12,27,17,17,0,2,31,
+  0,1,247,69,40,40,46,27,17,17,0,2,31,0,2,39,26,23,52,84,
+  13,29,16,0,2,26,31,31,79,78,0,79,70,70,0,1,10,69,40,40,
+  76,44,17,17,0,2,31,0,1,26,110,40,40,103,44,17,17,0,2,31,
+  0,1,26,110,40,40,135,16,17,17,0,2,31,0,1,40,110,40,40,162,
+  16,17,17,0,2,31,0,1,57,43,40,40,135,44,17,17,0,2,31,0,
+  1,71,43,40,40,162,44,17,17,0,2,31,0,129,239,159,71,29,10,68,
+  47,6,64,17,107,114,101,116,97,110,106,101,32,70,105,114,101,66,111,116,
+  45,97,0,129,220,167,110,14,86,6,23,6,64,17,114,101,102,108,101,107,
+  116,111,114,0,129,220,167,110,14,77,68,43,6,64,17,107,114,101,116,97,
+  110,106,101,32,107,97,109,101,114,101,0,129,3,167,100,14,148,68,19,6,
+  64,17,112,117,109,112,97,0,129,27,19,52,14,141,6,34,6,64,17,97,
+  107,116,117,97,116,111,114,32,45,32,112,112,0 };
+  
+// this structure defines all the variables and events of your control interface 
 struct {
 
     // input variables
-  uint8_t M; // =1 if button pressed, else =0
-  uint8_t S; // =1 if button pressed, else =0
-  uint8_t D; // =1 if button pressed, else =0
-  uint8_t A; // =1 if button pressed, else =0
-  uint8_t I; // =1 if button pressed, else =0
-  uint8_t K; // =1 if button pressed, else =0
-  uint8_t L; // =1 if button pressed, else =0
-  uint8_t J; // =1 if button pressed, else =0
+  uint8_t naprijed; // =1 if button pressed, else =0
+  uint8_t nazad; // =1 if button pressed, else =0
+  uint8_t lijevo; // =1 if button pressed, else =0
+  uint8_t desno; // =1 if button pressed, else =0
+  uint8_t reflektor; // =1 if switch ON and =0 if OFF
+  uint8_t kamera_l; // =1 if button pressed, else =0
+  uint8_t kamera_d; // =1 if button pressed, else =0
   uint8_t aktuator_1; // =1 if button pressed, else =0
   uint8_t aktuator_2; // =1 if button pressed, else =0
-  uint8_t reflektor; // =1 if switch ON and =0 if OFF
-  uint8_t pumpa; // =1 if switch ON and =0 if OFF
+  uint8_t pumpa_1; // =1 if button pressed, else =0
+  uint8_t pumpa_2; // =1 if button pressed, else =0
 
     // other variable
   uint8_t connect_flag;  // =1 if wire connected, else =0
 
-} RemoteXY;  
+} RemoteXY;   
 #pragma pack(pop)
  
 /////////////////////////////////////////////
 //           END RemoteXY include          //
 /////////////////////////////////////////////
 
-#define PIN_M 3
-#define PIN_S 2
-#define PIN_D 14
-#define PIN_A 16
-#define PIN_I 15
-#define PIN_K 17
-#define PIN_L 18
-#define PIN_J 19
-#define PIN_AKTUATOR_1 22
-#define PIN_AKTUATOR_2 23
-#define PIN_REFLEKTOR 21
-#define PIN_PUMPA 20
+#define PIN_NAPRIJED 14
+#define PIN_NAZAD 15
+#define PIN_LIJEVO 17
+#define PIN_DESNO 16
+#define PIN_REFLEKTOR 18
+#define PIN_KAMERA_L 19
+#define PIN_KAMERA_D 20
+#define PIN_AKTUATOR_1 21
+#define PIN_AKTUATOR_2 22
+#define PIN_PUMPA_1 23
+#define PIN_PUMPA_2 24
 
-#define motor_A 4
-#define motor_B 5
-#define motor_a 6
-#define motor_b 7
+#define motor_A 5
+#define motor_B 4
+#define motor_a 2
+#define motor_b 3
 
-#define relayPin1 33  //pumpa
-#define relayPin2 27  //aktuator1
-#define relayPin3 29  //aktuator2
-#define relayPin4 31  //reflektor
+#define relayPin1 31 //reflektor
+#define relayPin2 27 //aktuator1
+#define relayPin3 29 //aktuator2
+#define relayPin4 33 //pumpa1
+#define relayPin5 35 //pumpa2
+#define relayPin6 37 //kameraD
+#define relayPin7 39 //kameraL
 
 
-void setup()
+
+void setup() 
 {
-  RemoteXY_Init ();
- 
-  pinMode (PIN_M, OUTPUT);
-  pinMode (PIN_S, OUTPUT);
-  pinMode (PIN_D, OUTPUT);
-  pinMode (PIN_A, OUTPUT);
-  pinMode (PIN_I, OUTPUT);
-  pinMode (PIN_K, OUTPUT);
-  pinMode (PIN_L, OUTPUT);
-  pinMode (PIN_J, OUTPUT);
+  RemoteXY_Init (); 
+  
+  pinMode (PIN_NAPRIJED, OUTPUT);
+  pinMode (PIN_NAZAD, OUTPUT);
+  pinMode (PIN_LIJEVO, OUTPUT);
+  pinMode (PIN_DESNO, OUTPUT);
+  pinMode (PIN_REFLEKTOR, OUTPUT);
+  pinMode (PIN_KAMERA_L, OUTPUT);
+  pinMode (PIN_KAMERA_D, OUTPUT);
   pinMode (PIN_AKTUATOR_1, OUTPUT);
   pinMode (PIN_AKTUATOR_2, OUTPUT);
-  pinMode (PIN_REFLEKTOR, OUTPUT);
-  pinMode (PIN_PUMPA, OUTPUT);
+  pinMode (PIN_PUMPA_1, OUTPUT);
+  pinMode (PIN_PUMPA_2, OUTPUT);
 
   pinMode (motor_A, OUTPUT);
   pinMode (motor_B, OUTPUT);
   pinMode (motor_a, OUTPUT);
   pinMode (motor_b, OUTPUT);
 
-  digitalWrite(motor_A, LOW);
-  digitalWrite(motor_B, LOW);
-  digitalWrite(motor_a, LOW);
-  digitalWrite(motor_b, LOW);
+  digitalWrite (motor_A, LOW);
+  digitalWrite (motor_B, LOW);
+  digitalWrite (motor_a, LOW);
+  digitalWrite (motor_b, LOW);
 
   pinMode (relayPin1, OUTPUT);
   pinMode (relayPin2, OUTPUT);
   pinMode (relayPin3, OUTPUT);
   pinMode (relayPin4, OUTPUT);
+  pinMode (relayPin5, OUTPUT);
+  pinMode (relayPin6, OUTPUT);
+  pinMode (relayPin7, OUTPUT);
 
-  digitalWrite(relayPin1, HIGH);
-  digitalWrite(relayPin2, HIGH);
-  digitalWrite(relayPin3, HIGH);
-  digitalWrite(relayPin4, HIGH);
+  digitalWrite (relayPin1, HIGH);
+  digitalWrite (relayPin2, HIGH);
+  digitalWrite (relayPin3, HIGH);
+  digitalWrite (relayPin4, HIGH);
+  digitalWrite (relayPin5, HIGH);
+  digitalWrite (relayPin6, HIGH);
+  digitalWrite (relayPin7, HIGH);
 
   // TODO you setup code
- 
+  
 }
 
-void loop()
-{
-
+void loop() 
+{ 
   RemoteXY_Handler ();
-
- 
-  digitalWrite(PIN_M, (RemoteXY.M==0)?LOW:HIGH);
-  digitalWrite(PIN_S, (RemoteXY.S==0)?LOW:HIGH);
-  digitalWrite(PIN_D, (RemoteXY.D==0)?LOW:HIGH);
-  digitalWrite(PIN_A, (RemoteXY.A==0)?LOW:HIGH);
-  digitalWrite(PIN_I, (RemoteXY.I==0)?LOW:HIGH);
-  digitalWrite(PIN_K, (RemoteXY.K==0)?LOW:HIGH);
-  digitalWrite(PIN_L, (RemoteXY.L==0)?LOW:HIGH);
-  digitalWrite(PIN_J, (RemoteXY.J==0)?LOW:HIGH);
+  
+  digitalWrite(PIN_NAPRIJED, (RemoteXY.naprijed==0)?LOW:HIGH);
+  digitalWrite(PIN_NAZAD, (RemoteXY.nazad==0)?LOW:HIGH);
+  digitalWrite(PIN_LIJEVO, (RemoteXY.lijevo==0)?LOW:HIGH);
+  digitalWrite(PIN_DESNO, (RemoteXY.desno==0)?LOW:HIGH);
+  digitalWrite(PIN_REFLEKTOR, (RemoteXY.reflektor==0)?LOW:HIGH);
+  digitalWrite(PIN_KAMERA_L, (RemoteXY.kamera_l==0)?LOW:HIGH);
+  digitalWrite(PIN_KAMERA_D, (RemoteXY.kamera_d==0)?LOW:HIGH);
   digitalWrite(PIN_AKTUATOR_1, (RemoteXY.aktuator_1==0)?LOW:HIGH);
   digitalWrite(PIN_AKTUATOR_2, (RemoteXY.aktuator_2==0)?LOW:HIGH);
-  digitalWrite(PIN_REFLEKTOR, (RemoteXY.reflektor==0)?LOW:HIGH);
-  digitalWrite(PIN_PUMPA, (RemoteXY.pumpa==0)?LOW:HIGH);
+  digitalWrite(PIN_PUMPA_1, (RemoteXY.pumpa_1==0)?LOW:HIGH);
+  digitalWrite(PIN_PUMPA_2, (RemoteXY.pumpa_2==0)?LOW:HIGH);
+  
+  // TODO you loop code
+  // use the RemoteXY structure for data transfer
+  // do not call delay(), use instead RemoteXY_delay() 
 
 
-  if(RemoteXY.M == 1){
-    analogWrite(motor_A, 150);
-    analogWrite(motor_a, 150);
-    digitalWrite(motor_B, LOW);
-    digitalWrite(motor_b, LOW);
-    }
+  if(RemoteXY.naprijed == 1){
+    analogWrite (motor_A, 255);
+    analogWrite (motor_a, 225);
+    digitalWrite (motor_B, LOW);
+    digitalWrite (motor_b, LOW);   
+  }
 
-  if(RemoteXY.S == 1){
-    analogWrite(motor_A, 150);
-    analogWrite(motor_a, 150);
-    }
+  else if(RemoteXY.nazad == 1){
+    analogWrite (motor_B, 150);
+    analogWrite (motor_b, 165);
+    digitalWrite (motor_A, LOW);
+    digitalWrite (motor_a, LOW);   
+  }
 
-  else if(RemoteXY.D == 1){
-    analogWrite(motor_A, 150);
-    analogWrite(motor_a, 50);
-    }
- 
-  else if(RemoteXY.A == 1){
-    analogWrite(motor_A, 50);
-    analogWrite(motor_a, 150);
+  else if(RemoteXY.desno == 1){
+    analogWrite (motor_A, 65);
+    analogWrite (motor_a, 135);
+    digitalWrite (motor_B, LOW);
+    digitalWrite (motor_b, LOW);   
+  }
+
+  else if(RemoteXY.lijevo == 1){
+      analogWrite (motor_A, 150);
+      analogWrite (motor_a, 50);
+      digitalWrite (motor_B, LOW);
+      digitalWrite (motor_b, LOW);   
     }
 
 
@@ -195,27 +214,43 @@ void loop()
     }
 
   else if(RemoteXY.reflektor == 1){
-    digitalWrite(relayPin4, LOW);
-    }
-
-  else if(RemoteXY.pumpa == 1){
     digitalWrite(relayPin1, LOW);
     }
 
- else{
-  digitalWrite(motor_A, LOW);
-  digitalWrite(motor_B, LOW);
-  digitalWrite(motor_a, LOW);
-  digitalWrite(motor_b, LOW);
+  else if(RemoteXY.pumpa_1 == 1){
+    digitalWrite(relayPin4, LOW);
+    digitalWrite(relayPin5, HIGH);
+    }
 
-  digitalWrite(relayPin1, HIGH);
-  digitalWrite(relayPin2, HIGH);
-  digitalWrite(relayPin3, HIGH);
-  digitalWrite(relayPin4, HIGH);
+  else if(RemoteXY.pumpa_2 == 1){
+    digitalWrite(relayPin4, HIGH);
+    digitalWrite(relayPin5, LOW);
+    }
+
+  else if(RemoteXY.kamera_l == 1){
+    digitalWrite(relayPin6, LOW);
+    digitalWrite(relayPin7, HIGH);
+    }
+
+  else if(RemoteXY.kamera_d == 1){
+    digitalWrite(relayPin6, HIGH);
+    digitalWrite(relayPin7, LOW);
+    }
+
+  else{
+    digitalWrite(motor_A, LOW);
+    digitalWrite(motor_B, LOW);
+    digitalWrite(motor_a, LOW);
+    digitalWrite(motor_b, LOW);
+
+    digitalWrite(relayPin1, HIGH);
+    digitalWrite(relayPin2, HIGH);
+    digitalWrite(relayPin3, HIGH);
+    digitalWrite(relayPin4, HIGH);
+    digitalWrite(relayPin5, HIGH);
+    digitalWrite(relayPin6, HIGH);
+    digitalWrite(relayPin7, HIGH);
   }
-  // TODO you loop code
-  // use the RemoteXY structure for data transfer
-  // do not call delay(), use instead RemoteXY_delay()
 
 
 }
